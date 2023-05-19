@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* Primary */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%)
+}
+
+body{
+    background-color: var(--off-white);
+}
+
+main{
+    background-color: var(--white);
+    width: 90vw;
+    margin: 20vh auto;
+    border-radius: 30px;
+    border-bottom-right-radius: 150px;
+    padding: 60px 30px;
+
+    #input-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        color: var(--smokey-grey);
+        margin-bottom: 90px;
+        div{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                letter-spacing: 0.2rem;
+            }
+
+            input{
+                width: 100%;
+                font-size: 32px;
+                padding: 5px 15px;
+                margin-top: 0.5rem;
+                align-self: center;
+                border: 1px solid var(--light-grey);
+                border-radius: 0.5rem;
+            }
+
+            p{
+                color: var(--light-red);
+                margin-top: 5px;
+                font-size: 0.62rem;
+                font-weight: 400;
+                font-style: italic;
+                visibility: hidden;
+            }
+        }
+    }
+    #divider{
+        hr{
+            border: 1px solid var(--off-white);
+        }
+        #icon{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: var(--purple);
+            margin: auto;
+            position: relative;
+            top: -45px;
+            img{
+                height: 50px;
+                margin: 20px;
+            }
+        }
+    }
+    #display-result{
+        font-size: 4rem;
+        font-style: italic;
+        font-weight: 800;
+        span{
+            color: var(--purple);
+        }
+    }
+}
+@media(min-width:750px){
+    main{
+        width: 700px;
+        padding: 50px;
+        padding-bottom: 0;
+        border-bottom-right-radius: 200px;
+
+        #input-form{
+            margin-bottom: 30px;
+            margin-right: 10vw;
+            column-gap: 30px;
+            div p{
+                font-size: 0.7rem;
+            }
+        }
+        #icon{
+            right: -260px;
+        }
+        #display-result{
+            font-size: 4rem;
+            position: relative;
+            top: -4rem;
+        }
+    }
+}
